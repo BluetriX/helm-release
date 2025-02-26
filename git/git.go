@@ -217,9 +217,11 @@ func (g *Git) versionFromHistory(ver *semver.Version) (*semver.Version, error) {
 		}
 	}
 
-	version, err = version.SetMetadata(sha)
-	if err != nil {
-		return nil, err
+	if tagged || branch == "master" {
+		version, err = version.SetMetadata(sha)
+		if err != nil {
+			return nil, err
+		}
 	}
 	return &version, err
 }
