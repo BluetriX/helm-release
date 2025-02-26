@@ -43,7 +43,7 @@ To describe the release naming process we will use the following nomenclature.
   * strips any characters that don't match - https://semver.org/#spec-item-9
   * We prefix BRANCH with `0.` to ensure it's the lowest version
 
-The default version for a branch is `NEXT_TAG-0.BRANCH-COMMITS-SHA+SHA`
+The default version for a branch is `NEXT_TAG-0.BRANCH-COMMITS-SHA`
 
 #### Tags
 
@@ -54,11 +54,11 @@ When COMMITS is equal to 0 we assume the intent is to do a release of the curren
 
 #### Master branch
 
-The master branch is treated differently from the default and will be `NEXT_TAG-COMMITS-SHA+SHA`
+The master branch is treated differently from the default and will be `NEXT_TAG-COMMITS+SHA`
 
 #### Integrated Support for Jenkins and PR branches
 
-Jenkins uses the environment variable BRANCH_NAME with the value of the PR example `PR-97`.  This will result in a release version of `NEXT_TAG-0.pr-97-COMMITS-SHA+SHA`
+Jenkins uses the environment variable BRANCH_NAME with the value of the PR example `PR-97`.  This will result in a release version of `NEXT_TAG-0.pr-97-COMMITS-SHA`
 
 ## Install without internet
 
